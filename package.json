@@ -1,0 +1,30 @@
+{
+  "name": "cartographer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authenticated web app crawler and UI state cartographer built with Playwright.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "auth:save-state": "tsx src/cli.ts auth-save-state",
+    "run:init": "tsx src/cli.ts init-run",
+    "crawl:seed": "tsx src/cli.ts crawl-seed",
+    "crawl:safe": "tsx src/cli.ts crawl-safe",
+    "crawl:matrix": "tsx src/cli.ts crawl-matrix",
+    "analyze:stub": "tsx src/cli.ts analyze-stub",
+    "store:status": "tsx src/cli.ts store-status"
+  },
+  "dependencies": {
+    "commander": "^14.0.1",
+    "playwright": "^1.55.0",
+    "pngjs": "^7.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

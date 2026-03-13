@@ -1,0 +1,44 @@
+{
+  "matrix_version": "1.0",
+  "default_label": "safe-bfs",
+  "defaults": {
+    "limits": {
+      "max_states": 30,
+      "max_actions_per_state": 20,
+      "max_overlay_actions": 8,
+      "max_overlay_depth": 2,
+      "max_depth": 6,
+      "max_queue_size": 200,
+      "max_runtime_minutes": 30,
+      "list_row_sample_size": 3
+    },
+    "policy": {
+      "allow_mutating": false,
+      "allow_dangerous": false,
+      "allow_label_patterns": [],
+      "deny_label_patterns": [
+        "delete",
+        "reset"
+      ]
+    },
+    "probes": {
+      "enable_list_empty_state_probe": true,
+      "enable_list_pagination_probe": true
+    }
+  },
+  "entries": [
+    {
+      "role": "member",
+      "config_label": "default-workspace",
+      "start_url": "https://app.example.test/dashboard"
+    },
+    {
+      "role": "admin",
+      "config_label": "default-workspace",
+      "start_url": "https://app.example.test/admin",
+      "limits": {
+        "max_states": 40
+      }
+    }
+  ]
+}
